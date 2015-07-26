@@ -1,7 +1,17 @@
-define(['backbone',
-	'pizi-backbone-localStorage',
-	'pizi-backbone-indexedDB'],
-function(Backbone,
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define(['backbone', 'pizi-backbone-localStorage', 'pizi-backbone-indexedDB'], factory);
+    } else if (typeof module === 'object' && module.exports) {
+        // Node. Does not work with strict CommonJS, but
+        // only CommonJS-like environments that support module.exports,
+        // like Node.
+        module.exports = factory(require('backbone', 'pizi-backbone-localStorage', 'pizi-backbone-indexedDB'));
+    } else {
+        // Browser globals (root is window)
+        root.returnExports = factory(root.backbone, root.pizi-backbone-localStorage, root.pizi-backbone-indexedDB);
+    }
+}(this, function(Backbone,
 	bbLocalStorage,
 	bbIndexedDB){
 
@@ -63,4 +73,4 @@ function(Backbone,
 		apply : overrideBackboneSync
 	};
 	
-});
+}));
