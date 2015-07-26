@@ -4,8 +4,8 @@
   "main": "pizi-backbone-persist.js",
   "dependencies": {
     "backbone": ">=1.1.2",
-    "pizi-localStorage": "Manuel-Pi/pizi-backbone-localStorage",
-    "pizi-indexedDB": "Manuel-Pi/pizi-backbone-indexedDB"
+    "pizi-backbone-localStorage": "Manuel-Pi/pizi-backbone-localStorage",
+    "pizi-backbone-indexedDB": "Manuel-Pi/pizi-backbone-indexedDB"
   },
   "version": "0.0.1",
   "authors": "Manuel-Pi",
