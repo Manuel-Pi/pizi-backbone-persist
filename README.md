@@ -13,6 +13,6 @@ Persit backbone entities using localStorage or indexedDB API's.
 		error: function(){...}, // Error callback
 		dbName: "name", // Name of the IDBDatabase
 		dbVersion: "1", // Version of the database
-	  persist: "indexedDB", // Set the persistence API for models and session, localStorage or indexedDB
-	  models: "localStorage" // Set the persistence API, only for models, if not defined, egal 'persist'
+	  	persist: "indexedDB", // Set the persistence API for models and session, localStorage or indexedDB
+	  	models: "localStorage" // Set the persistence API, only for models, if not defined, egal 'persist'
 	} 
