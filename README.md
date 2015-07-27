@@ -11,8 +11,10 @@ Persit backbone entities using localStorage or indexedDB API's.
 	{
 		success: function(){...}, // Success callback
 		error: function(){...}, // Error callback
-		dbName: "name", // Name of the IDBDatabase
-		dbVersion: "1", // Version of the database
 	  	persist: "indexedDB", // Set the persistence API for models and session, localStorage or indexedDB
-	  	models: "localStorage" // Set the persistence API, only for models, if not defined, egal 'persist'
+	  	models: "localStorage", // Set the persistence API, only for models, if not defined, egal 'persist'
+	  	dbName: "name", // Name of the IDBDatabase, if indexedDB used
+		dbVersion: "1" // Version of the database, if indexedDB used
 	} 
+
+Initialize the sepecified persit API overriding Backbone.sync(). A different API can be used for models and session object.
